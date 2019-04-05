@@ -2,6 +2,7 @@
 
 
 function search(number) {
+    number=Math.abs(number); // на случай отрицательного на входе
     number=number+"";
     //brr=[0] (массив ответа) - 0 на случай, если на входе палиндром
     let arr=number.split(""), brr=[0];
@@ -34,3 +35,5 @@ alert(search(1234));   //13
 alert(search(25415236439));  //15013
 alert(search(2541536469));   //14983
 alert(search(11111)); //0
+alert(search(-134)); //3;
+alert(search(0)); //0
